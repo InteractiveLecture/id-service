@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = '1.2.5.RELEASE'
+        springBootVersion = '1.2.6.RELEASE'
     }
     repositories {
         mavenCentral()
@@ -11,10 +11,6 @@ buildscript {
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
         classpath("io.spring.gradle:dependency-management-plugin:0.5.2.RELEASE")
-        classpath group: 'org.lecture',
-                name: 'docker-compose-plugin',
-                version: '1.0-SNAPSHOT'
-
     }
 }
 
@@ -23,12 +19,6 @@ apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
 apply plugin: 'io.spring.dependency-management'
-apply plugin: 'lecture'
-
-compose {
-    addDependency("hugo","blubb")
-}
-
 
 
 jar {
